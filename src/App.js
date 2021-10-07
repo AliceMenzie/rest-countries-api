@@ -1,39 +1,35 @@
-import NavBar from './components/Navbar'
-import Countries from './components/Countries'
-import React, {useState, useEffect} from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Country from './components/Country'
-
+import NavBar from "./components/Navbar";
+import Countries from "./components/Countries";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Country from "./components/Country";
 
 function App() {
-  const [countries, setCountries] = useState([])
+  const [countries, setCountries] = useState([]);
 
   async function fetchCountries() {
-    const response = await fetch('https://restcountries.com/v2/all')
-    const data = await response.json()
+    const response = await fetch("https://restcountries.com/v2/all");
+    const data = await response.json();
 
-    setCountries(data)
+    setCountries(data);
   }
 
   useEffect(() => {
-    fetchCountries()
-  }, [])
-
+    fetchCountries();
+  }, []);
 
   return (
     <Router>
-
       <NavBar />
 
-    <Switch>
-      <Route exact path='/'>
-        <Countries countries={countries} />
-      </Route>
-      <Route exact path='/country/:id'>
-        <Country countries={countries} />
-      </Route>
-    </Switch>
-
+      <Switch>
+        <Route exact path="/">
+          <Countries countries={countries} />
+        </Route>
+        <Route exact path="/country/:id">
+          <Country countries={countries} />
+        </Route>
+      </Switch>
     </Router>
   );
 }
