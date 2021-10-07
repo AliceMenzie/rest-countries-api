@@ -1,6 +1,9 @@
 import NavBar from './components/Navbar'
 import Countries from './components/Countries'
 import React, {useState, useEffect} from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Country from './components/Country'
+
 
 function App() {
   const [countries, setCountries] = useState([])
@@ -18,10 +21,20 @@ function App() {
 
 
   return (
-    <div>
-    <NavBar />
-    <Countries countries={countries} />
-    </div>
+    <Router>
+
+      <NavBar />
+
+    <Switch>
+      <Route exact path='/'>
+        <Countries countries={countries} />
+      </Route>
+      <Route exact path='/country/:id'>
+        <Country countries={countries} />
+      </Route>
+    </Switch>
+
+    </Router>
   );
 }
 
