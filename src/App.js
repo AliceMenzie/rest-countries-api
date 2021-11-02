@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./components/Search";
 import Country from "./components/Country";
+import "./styles/theme.css";
 
 function App() {
-  
+
+  const [theme, setTheme] = useState("light");
   const [countries, setCountries] = useState([]);
 
   async function fetchCountries() {
@@ -20,6 +22,7 @@ function App() {
   }, []);
 
   return (
+    <div className={`App ${theme}`}>
     <Router>
       <NavBar />
       
@@ -34,6 +37,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </div>
   );
 }
 

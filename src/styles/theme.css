@@ -1,0 +1,14 @@
+
+.light {
+    /* --theme-color: #A80000; */
+    --theme-page-background: hsl(0, 0%, 98%);
+    --theme-page-text: hsl(200, 15%, 8%);
+    --theme-elements: hsl(0, 0%, 100%);
+}
+
+.dark {
+    /* --theme-color: #0000A8; */
+    --theme-page-background: hsl(207, 26%, 17%);
+    --theme-page-text: hsl(0, 0%, 100%);
+    --theme-elements: hsl(209, 23%, 22%);
+}
