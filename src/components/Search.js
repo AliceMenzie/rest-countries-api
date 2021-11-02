@@ -1,6 +1,8 @@
  /* eslint-disable */
 import React, { useState } from "react";
 import Countries from "./Countries";
+import { AiOutlineSearch } from 'react-icons/ai';
+
 
 function Search({ countries }) {
   const [query, setQuery] = useState("");
@@ -22,29 +24,37 @@ function Search({ countries }) {
   }
 
   return (
-    <div>
+    <div className="main-container">
+      <div className="hero-search">
+        <div className="search-input-continer">
+          < AiOutlineSearch />
       <input
+        className="search-input"
         type="text"
-        placeholder="search"
+        placeholder="Search for a country..."
         onChange={(e) => setQuery(e.target.value)}
       />
-
+      </div>
       <section>
-        <select
+        <div className="search-filter-wrapper">
+        <select className="search-filter"
           onChange={(e) => {
             setFilterRegion(e.target.value);
           }}
           aria-label="Filter Countries By Region"
         >
-          <option value="All">Filter By Region</option>
-          <option value="Africa">Africa</option>
-          <option value="Americas">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
+          <option className="option" value="All">Filter By Region</option>
+          <option className="option" value="Africa">Africa</option>
+          <option className="option" value="Americas">America</option>
+          <option className="option" value="Asia">Asia</option>
+          <option className="option" value="Europe">Europe</option>
+          <option className="option" value="Oceania">Oceania</option>
         </select>
+        </div>
       </section>
-      <section>{searchCountries()}</section>
+      
+      </div>
+      <section className="countries-section">{searchCountries()}</section>
     </div>
   );
 }
