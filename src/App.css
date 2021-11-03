@@ -6,6 +6,12 @@
 }
 
 
+/* .App {
+    background: var(--theme-page-background);
+    color: var(--theme-page-text);
+  } */
+
+
 * {
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
@@ -30,11 +36,12 @@ nav h3 {
     background-color: var(--theme-elements);
 }
 
-.theme {
+/* .theme {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .theme p {
@@ -45,7 +52,7 @@ nav h3 {
 
 .theme svg {
     background-color: var(--theme-elements);
-}
+} */
 
 .btn-home {
     text-decoration: none;
