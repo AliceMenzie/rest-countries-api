@@ -21,6 +21,8 @@
     padding: 0;
 }
 
+
+
 nav {
     display: flex;
     align-items: center;
@@ -36,23 +38,19 @@ nav h3 {
     background-color: var(--theme-elements);
 }
 
-/* .theme {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+button {
+    all: unset;
+    text-decoration: none;
+    color: var(--theme-page-text);
     cursor: pointer;
-}
-
-.theme p {
-    padding-left: 0.5rem;
     font-size: 12px;
-    background-color: var(--theme-elements);
+    width: 100px;
+    padding: 0.5rem;
 }
 
-.theme svg {
-    background-color: var(--theme-elements);
-} */
+button svg {
+    padding-right: 2px;
+}
 
 .btn-home {
     text-decoration: none;
@@ -109,6 +107,7 @@ nav h3 {
 .main-container {
     background-color: var(--theme-page-background);
     padding: 3rem;
+    min-height: 100vh;
 }
 
 
@@ -149,3 +148,48 @@ img.flag {
     /* height: 150px; */
 }
 
+.country-container {
+    background-color: var(--theme-page-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* padding: 3rem; */
+    overflow: hidden;
+    min-height: 100vh;
+    
+}
+.country-container h3 {
+    padding: 1rem 0rem;
+}
+
+
+.country-container p, strong {
+    padding-bottom: 0.5rem;
+    background-color: var(--theme-page-background);
+    font-size: 12px;
+}
+
+
+.country-1 {
+    padding-right: 5rem;
+    background-color: var(--theme-page-background);
+}
+.country-2 {
+    background-color: var(--theme-page-background);
+    min-width: 300px;
+}
+.country-3 {
+    background-color: var(--theme-page-background);
+   
+    min-width: 300px;
+}
+.country-4 {
+    background-color: var(--theme-page-background);
+    /* align-self: flex-end; */
+    left: -299px;
+    top: 100px;
+    position: relative;
+    min-width: 300px;
+}
