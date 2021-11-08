@@ -20,11 +20,11 @@ export default function Country({ countries }) {
  
   return (
     <div className="selected-country-container">
-      <div>
+     
       <button className="btn btn-back"type="button" onClick={goBack}>
      < IoIosArrowRoundBack /> Back
   </button>
-      </div>
+      
       {selectedCountry.map((item) => (
       <div className="country-container">
 
@@ -48,7 +48,7 @@ export default function Country({ countries }) {
         </div>
 
         <div className="country-4">
-        <strong>Border Countries: </strong>{item.borders}
+        <strong>Border Countries: </strong> {item.borders.map(border => (<span className="border-country">{border} </span>))}
         </div>
 
       </div>
