@@ -108,6 +108,7 @@ button svg {
     background-color: var(--theme-page-background);
     padding: 3rem;
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 
@@ -116,15 +117,17 @@ button svg {
     margin: 0 auto;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    overflow: hidden;
+    /* overflow: hidden; */
 }
+
+
 
 .country {
     /* border: 0.5px solid hsl(0, 0%, 90%); */
     background-color: var(--theme-elements);
     border-radius: 5px;
-    max-width: 250px;
-    overflow: hidden;
+    min-width: 250px;
+    /* overflow: hidden; */
     /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
 
@@ -135,17 +138,28 @@ button svg {
 .country-contents {
     margin: 2rem;
 }
-.country-contents h3, strong, p {
+.country-contents h3, p, strong  {
     background-color: var(--theme-elements);
 }
 .country-contents p {
     font-size: 12px;
 }
+.country-contents strong {
+    background-color: var(--theme-elements);
+}
 
+div.img-wrapper img.flag {
+    max-width: 100%;
+}
 
-img.flag {
-    width: 250px;
+div.country-1 img.flag {
+    max-width: 100%;
     /* height: 150px; */
+    
+}
+
+.selected-country-container {
+    padding: 3rem;
 }
 
 .country-container {
@@ -155,17 +169,21 @@ img.flag {
     justify-content: center;
     align-items: center;
     /* flex-wrap: wrap; */
-    /* padding: 3rem; */
+    margin: 3rem;
     overflow: hidden;
-    min-height: 100vh;
-    
+   height: 100vh; 
 }
 .country-container h3 {
     padding: 1rem 0rem;
 }
 
 
-.country-container p, strong {
+.country-container p  {
+    padding-bottom: 0.5rem;
+    background-color: var(--theme-page-background);
+    font-size: 12px;
+}
+.country-container  strong {
     padding-bottom: 0.5rem;
     background-color: var(--theme-page-background);
     font-size: 12px;
@@ -174,8 +192,10 @@ img.flag {
 
 .country-1 {
     padding-right: 5rem;
+    width: 100%;
     background-color: var(--theme-page-background);
 }
+
 .country-2 {
     background-color: var(--theme-page-background);
     min-width: 300px;
@@ -192,4 +212,18 @@ img.flag {
     top: 100px;
     position: relative;
     min-width: 300px;
+}
+
+.btn.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn.btn-back svg {
+    width: 1.3rem;
+    height: 1.2rem;
+    
 }

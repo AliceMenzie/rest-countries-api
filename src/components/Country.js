@@ -1,8 +1,14 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
+import { IoIosArrowRoundBack } from 'react-icons/io';
 
 export default function Country({ countries }) {
   const { id } = useParams();
+  const history = useHistory();
+
+  const goBack = () => {
+    history.goBack()
+  }
 
   let selectedCountry = countries.filter(country => {
 
@@ -13,7 +19,12 @@ export default function Country({ countries }) {
 
  
   return (
-    <div>
+    <div className="selected-country-container">
+      <div>
+      <button className="btn btn-back"type="button" onClick={goBack}>
+     < IoIosArrowRoundBack /> Back
+  </button>
+      </div>
       {selectedCountry.map((item) => (
       <div className="country-container">
 
