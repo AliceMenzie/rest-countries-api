@@ -40,7 +40,7 @@ button {
   text-decoration: none;
   color: var(--theme-page-text);
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   width: 100px;
   padding: 0.5rem;
 }
@@ -127,26 +127,39 @@ button svg {
 
 .country-contents {
   margin: 2rem;
+  
 }
+
+.country-contents h3 {
+  padding-bottom: 0.5rem;
+}
+
+
 .country-contents h3,
 p,
 strong {
   background-color: var(--theme-elements);
 }
 .country-contents p {
-  font-size: 12px;
+  font-size: 14px;
 }
 .country-contents strong {
   background-color: var(--theme-elements);
 }
 
+
+
 div.img-wrapper img.flag {
+  /* max-width: 375px; 
+  max-height: 250px;  */
   max-width: 100%;
+  max-height: 67%;
+  
 }
 
 div.country-1 img.flag {
-  max-width: 500px;
-  min-width: 300px;
+  width: 720px;
+  height: 480px;
 }
 
 .selected-country-container {
@@ -163,7 +176,7 @@ div.country-container {
   /* flex-wrap: wrap; */
   overflow: hidden;
   margin-top: 6rem;
-  margin-left: 0;
+  margin-right: 22rem;
   /* height: 100vh; */
 }
 .country-container h3 {
@@ -173,27 +186,33 @@ div.country-container {
 .country-container p {
   padding-bottom: 0.5rem;
   background-color: var(--theme-page-background);
-  font-size: 12px;
+  font-size: 14px;
 }
 .country-container strong {
   padding-bottom: 0.5rem;
   background-color: var(--theme-page-background);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .country-1 {
   padding-right: 5rem;
-  width: 600px;
+  
   background-color: var(--theme-page-background);
+}
+
+.country-heading {
+  padding-bottom: 1.5rem;
 }
 
 .country-2 {
   background-color: var(--theme-page-background);
   /* padding: 2rem; */
+  padding-right: 4rem;
 }
 .country-3 {
   background-color: var(--theme-page-background);
   padding-top: 3.5rem;
+  padding-right: 4rem;
   
 }
 .country-4 {
@@ -209,7 +228,7 @@ a.border-countries {
   margin: 0.5rem;
   padding: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 

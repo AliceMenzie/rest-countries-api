@@ -56,7 +56,7 @@ export default function Country({ countries }) {
           
 
           <div className="country-2">
-            <h3>{item.name}</h3>
+            <h1 className="country-heading">{item.name}</h1>
             <p>
               {" "}
               <strong> Native Name:</strong> {item.nativeName}
