@@ -19,10 +19,10 @@ export default function Country({ countries }) {
  console.log(selectedCountry)
 
 
-
  
   let container = []
-  selectedCountry.map(border => (border.borders.map( x => container.push(x))
+  selectedCountry.map(border => (border.borders === undefined ? 
+    null : border.borders.map( x => container.push(x))
     
     ))
 
