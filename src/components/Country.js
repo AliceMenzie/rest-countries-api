@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { IoIosArrowRoundBack } from 'react-icons/io';
+import { Link } from "react-router-dom";
 
 export default function Country({ countries }) {
   const { id } = useParams();
@@ -17,7 +18,37 @@ export default function Country({ countries }) {
  
  console.log(selectedCountry)
 
+
+
  
+  let container = []
+  selectedCountry.map(border => (border.borders.map( x => container.push(x))
+    
+    ))
+
+    console.log(`this is the container -------------`)
+    console.log(container)
+
+    let selectedBorderCountries = countries.filter(country => {
+    
+        for (let i of container) {
+
+         if(country.alpha3Code === i){
+           return country
+         }
+          
+        }  
+   })
+    
+    
+
+    
+        
+ console.log(selectedBorderCountries)
+
+
+//  console.log(getBorderingCountries(selectedCountry))
+
   return (
     <div className="selected-country-container">
      
@@ -47,10 +78,22 @@ export default function Country({ countries }) {
          <p><strong>Languages:</strong> {item.languages.map(lang => (<span>{lang.name} </span>))}</p>
         </div>
 
-        <div className="country-4">
-        <strong>Border Countries: </strong> {item.borders.map(border => (<span className="border-country">{border} </span>))}
-        </div>
+              
+          {/* // to={`country/${country.name}`} */}
 
+          <div className="country-4">
+        <div>
+            {item.borders === undefined ? (
+               null
+            ): (
+               <div>
+                 <p><strong>Borders:</strong> {selectedBorderCountries.map(border => (<Link to={`${border.name}`} >{border.name} </Link>))}</p>
+               {/* border is the alpha3Code so need to filter country by this then get mane and link name  */}
+               </div>
+            )}
+        </div>
+    </div>  
+    
       </div>
       
       
