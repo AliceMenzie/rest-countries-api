@@ -148,8 +148,9 @@ strong {
 }
 
 
-
-div.img-wrapper img.flag {
+/* 
+div.img-wrapper img.flag */
+.flag-home {
   /* max-width: 375px; 
   max-height: 250px;  */
   max-width: 100%;
@@ -157,14 +158,19 @@ div.img-wrapper img.flag {
   
 }
 
-div.country-1 img.flag {
+/* div.country-1 img.flag {
   width: 720px;
   height: 480px;
-}
+} */
+
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------Country Page------------------------- */
+/* ---------------------------------------------------------- */
 
 .selected-country-container {
   padding: 3rem;
-  height: 100vh; 
+  /* height: 100vh;  */
 }
 
 div.country-container {
@@ -175,12 +181,21 @@ div.country-container {
   align-items: center;
   /* flex-wrap: wrap; */
   overflow: hidden;
-  margin-top: 6rem;
+  margin-top: 2rem;
   margin-right: 22rem;
+  width: 100%;
   /* height: 100vh; */
+  /* border: 1px solid blue; */
 }
+
+div.country-container img {
+  width: 450px;
+  height: 375px;
+}
+
 .country-container h3 {
   padding: 1rem 0rem;
+  /* border: 1px solid red; */
 }
 
 .country-container p {
@@ -198,6 +213,13 @@ div.country-container {
   padding-right: 5rem;
   
   background-color: var(--theme-page-background);
+  /* flex: 1;
+  border: 1px solid red; */
+}
+
+.country-1 img {
+  height: 100px;
+  width: 300px;
 }
 
 .country-heading {
@@ -208,11 +230,15 @@ div.country-container {
   background-color: var(--theme-page-background);
   /* padding: 2rem; */
   padding-right: 4rem;
+  /* flex: 2;
+  border: 1px solid red; */
 }
 .country-3 {
   background-color: var(--theme-page-background);
   padding-top: 3.5rem;
   padding-right: 4rem;
+  /* flex: 2;
+  border: 1px solid red; */
   
 }
 .country-4 {

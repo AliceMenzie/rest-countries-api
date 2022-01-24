@@ -15,7 +15,7 @@ export default function Country({ countries }) {
     return country.name === id;
   });
 
-  console.log(selectedCountry);
+  // console.log(selectedCountry);
 
   let container = [];
   selectedCountry.map((border) =>
@@ -24,8 +24,8 @@ export default function Country({ countries }) {
       : border.borders.map((x) => container.push(x))
   );
 
-  console.log(`this is the container -------------`);
-  console.log(container);
+  // console.log(`this is the container -------------`);
+  // console.log(container);
 
   let selectedBorderCountries = countries.filter((country) => {
     for (let i of container) {
@@ -35,7 +35,7 @@ export default function Country({ countries }) {
     }
   });
 
-  console.log(selectedBorderCountries);
+  // console.log(selectedBorderCountries);
 
   //  console.log(getBorderingCountries(selectedCountry))
 
@@ -52,71 +52,65 @@ export default function Country({ countries }) {
           </div>
 
           <div className="country-content-wrapper">
-
-          
-
-          <div className="country-2">
-            <h1 className="country-heading">{item.name}</h1>
-            <p>
-              {" "}
-              <strong> Native Name:</strong> {item.nativeName}
-            </p>
-            <p>
-              {" "}
-              <strong>Population:</strong> {item.population}
-            </p>
-            <p>
-              {" "}
-              <strong>Region:</strong> {item.region}
-            </p>
-            <p>
-              {" "}
-              <strong>Sub Region:</strong> {item.subregion}
-            </p>
-            <p>
-              {" "}
-              <strong>Capital:</strong> {item.capital}
-            </p>
-            
-          </div>
-
-          <div className="country-3">
-            <p>
-              <strong>Top Level Domain:</strong> {item.topLevelDomain}
-            </p>
-            <p>
-              <strong>Currencies:</strong>{" "}
-              {item.currencies.map((curr) => (
-                <span>{curr.name}</span>
-              ))}
-            </p>
-            <p>
-              <strong>Languages:</strong>{" "}
-              {item.languages.map((lang) => (
-                <span>{lang.name} </span>
-              ))}
-            </p>
-          </div>
-
-          {/* // to={`country/${country.name}`} */}
-
-          {/* <div > */}
-  
-              {item.borders === undefined ? null : (
+            <div className="country-2">
+              <h1 className="country-heading">{item.name}</h1>
+              <p>
                 
-                  <div className="country-4">
-                    <strong>Borders:</strong>{" "}
-                    {selectedBorderCountries.map((border) => (
-                      
-                      <Link className="border-countries" to={`${border.name}`}>{border.name} </Link>
-                      
-                    ))}
-                  </div>
-              )}
-          </div>
-          </div>
+                <strong> Native Name:</strong> {item.nativeName}
+              </p>
+              <p>
+                
+                <strong>Population:</strong> {item.population}
+              </p>
+              <p>
+                
+                <strong>Region:</strong> {item.region}
+              </p>
+              <p>
+                
+                <strong>Sub Region:</strong> {item.subregion}
+              </p>
+              <p>
+                
+                <strong>Capital:</strong> {item.capital}
+              </p>
+            </div>
 
-         
+            <div className="country-3">
+              <p>
+                <strong>Top Level Domain:</strong> {item.topLevelDomain}
+              </p>
+              <p>
+                <strong>Currencies:</strong>
+                {item.currencies.map((curr) => (
+                  <span>{curr.name}</span>
+                ))}
+              </p>
+              <p>
+                <strong>Languages:</strong>
+                {item.languages.map((lang) => (
+                  <span>{lang.name} </span>
+                ))}
+              </p>
+            </div>
+
+            {/* // to={`country/${country.name}`} */}
+
+            {/* <div > */}
+
+            {item.borders === undefined ? null : (
+              <div className="country-4">
+                <strong>Borders:</strong>{" "}
+                {selectedBorderCountries.map((border) => (
+                  <Link className="border-countries" to={`${border.name}`}>
+                    {border.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
         // </div>
       ))}
     </div>

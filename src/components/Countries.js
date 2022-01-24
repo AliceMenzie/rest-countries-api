@@ -11,7 +11,7 @@ export default function Countries({ filteredCountries }) {
         <div key={country.alpha3Code} className="country">
           <div className="img-wrapper">
           <Link  to={`country/${country.name}`}>
-            <img className="flag" alt='flag' src={country.flag}/>  
+            <img className="flag-home" alt='flag' src={country.flag}/>  
           </Link>
           </div>
           <div className="country-contents">
